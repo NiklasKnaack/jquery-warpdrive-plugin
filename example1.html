@@ -6,7 +6,7 @@
     <meta charset='utf-8'>
     <title>Warp Drive - jQuery Example 1</title>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-    <script src='js/jquery.warpdrive.js'></script>
+    <script src='js/jquery.warpdrive.min.js'></script>
 
     <style type='text/css'>
 
@@ -33,17 +33,12 @@
             overflow: hidden;
             background-color: #CCC;
         }
-        /*
-        #window {
-            width:350px; 
-            height:350px; 
-            left:65px; 
-            top:65px; 
-            position:absolute;
-            padding: 50px 50px 50px 50px;
-            pointer-events: none;
+
+        #holder {
+            position: absolute;
+            width: 480px;
+            height: 480px;
         }
-        */
 
     </style>
 
@@ -53,7 +48,7 @@
 
             //------------------------------------------------------------------------
 
-            //Settings - params for WobbleWindow
+            //Settings - params for WarpDrive
             var settings = {
 
                 width: 480,
@@ -123,9 +118,6 @@
 
 <body>
 
-    <div id='holder' style='width:480px; height:480px; position:absolute; background-color: #000'>
-    
-
-    </div>
+    <div id='holder'></div>
 
 </body>
