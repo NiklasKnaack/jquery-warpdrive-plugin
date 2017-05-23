@@ -1,6 +1,8 @@
 # Warp drive jQuery plugin
 (jquery-warpdrive-plugin)
 
+![Alt text](https://cloud.githubusercontent.com/assets/10435486/26378626/a1808f06-4015-11e7-8592-8d935f82ad15.gif "Preview")
+
 ## Description
 
 Warp drive is a lightweight jQuery plugin that helps you create a cool, interactive, configurable, HTML5 canvas based warp drive/starfield effect. 
