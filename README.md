@@ -9,6 +9,10 @@ Warp drive is a lightweight jQuery plugin that helps you create a cool, interact
 
 Coming soon.
 
+## Installation
+
+Coming soon.
+
 ## Example Usage
 
 ### jQuery
@@ -115,6 +119,21 @@ var settings = {
 };
 
 var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
+```
+
+### Color settings/valid formats for starColor, starBgColor & starfieldBackgroundColor
+
+```js
+starBgColor: { r:255, g:255, b:255 }
+```
+```js
+starBgColor: '#ffffff'
+```
+```js
+starBgColor: '#fff'
+```
+```js
+starBgColor: 'rgb(255,255,255)'
 ```
 
 ## License
