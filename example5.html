@@ -63,28 +63,28 @@
                 hideContextMenu: true,
                 starCount: 6666,
                 starBgCount: 2222,
-                starBgColor: { r:255, g:255, b:255 },
+                starBgColor: { r:155, g:255, b:0 },
                 starBgColorRangeMin: 10,
-                starBgColorRangeMax: 40,
-                starColor: { r:255, g:255, b:255 },
-                starColorRangeMin: 10,
+                starBgColorRangeMax: 60,
+                starColor: { r:155, g:255, b:0 },
+                starColorRangeMin: 80,
                 starColorRangeMax: 100,
-                starfieldBackgroundColor: { r:0, g:0, b:0 },
-                starDirection: 1,
-                starSpeed: 20,
+                starfieldBackgroundColor: { r:155, g:0, b:255 },
+                starDirection: -1,
+                starSpeed: 10,
                 starSpeedMax: 200,
-                starSpeedAnimationDuration: 2,
+                starSpeedAnimationDuration: 5,
                 starFov: 300,
                 starFovMin: 200,
-                starFovAnimationDuration: 2,
+                starFovAnimationDuration: 5,
                 starRotationPermission: true,
                 starRotationDirection: 1,
                 starRotationSpeed: 0.0,
-                starRotationSpeedMax: 1.0,
+                starRotationSpeedMax: 1.5,
                 starRotationAnimationDuration: 2,
-                starWarpLineLength: 2.0,
+                starWarpLineLength: 1.0,
                 starWarpTunnelDiameter: 100,
-                starFollowMouseSensitivity: 0.025,
+                starFollowMouseSensitivity: 0.015,
                 starFollowMouseXAxis: true,
                 starFollowMouseYAxis: true
 
@@ -96,8 +96,8 @@
 
             //init
             
-            var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
-            //var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
+            //var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
+            var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
 
             //------------------------------------------------------------------------
 

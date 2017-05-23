@@ -63,14 +63,14 @@
                 hideContextMenu: true,
                 starCount: 6666,
                 starBgCount: 2222,
-                starBgColor: { r:255, g:255, b:255 },
+                starBgColor: { r:155, g:255, b:0 },
                 starBgColorRangeMin: 10,
-                starBgColorRangeMax: 40,
-                starColor: { r:255, g:255, b:255 },
-                starColorRangeMin: 10,
+                starBgColorRangeMax: 60,
+                starColor: { r:155, g:255, b:0 },
+                starColorRangeMin: 50,
                 starColorRangeMax: 100,
-                starfieldBackgroundColor: { r:0, g:0, b:0 },
-                starDirection: 1,
+                starfieldBackgroundColor: { r:0, g:33, b:0 },
+                starDirection: -1,
                 starSpeed: 20,
                 starSpeedMax: 200,
                 starSpeedAnimationDuration: 2,
@@ -96,8 +96,8 @@
 
             //init
             
-            var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
-            //var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
+            //var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
+            var warpdrive = new WarpDrive( document.getElementById( 'holder' ), settings );
 
             //------------------------------------------------------------------------
 
