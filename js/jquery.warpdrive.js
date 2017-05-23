@@ -387,7 +387,7 @@ THE SOFTWARE.
             
             while ( true ) {
 
-                if ( lx > 0 && lx < canvasWidth && ly > 0 && ly < canvasHeight ) {
+                if ( lx > -1 && lx < canvasWidth && ly > -1 && ly < canvasHeight ) {
 
                     setPixelAdditive( lx, ly, r, g, b, a );
 
@@ -668,7 +668,7 @@ THE SOFTWARE.
                 star.x2d = ( star.x * scale ) + center.x; 
                 star.y2d = ( star.y * scale ) + center.y; 
 
-                if ( star.x2d > 0 && star.x2d < canvasWidth && star.y2d > 0 && star.y2d < canvasHeight ) {
+                if ( star.x2d > -1 && star.x2d < canvasWidth && star.y2d > -1 && star.y2d < canvasHeight ) {
 
                     setPixelAdditive( star.x2d | 0, star.y2d | 0, star.color.r, star.color.g, star.color.b, 255 );
 
@@ -732,7 +732,7 @@ THE SOFTWARE.
 
                 if ( starSpeed === starSpeedMin ) {
 
-                    if ( star.x2d > 0 && star.x2d < canvasWidth && star.y2d > 0 && star.y2d < canvasHeight ) {
+                    if ( star.x2d > -1 && star.x2d < canvasWidth && star.y2d > -1 && star.y2d < canvasHeight ) {
 
                         setPixelAdditive( star.x2d | 0, star.y2d | 0, star.color.r, star.color.g, star.color.b, 255 );
 
@@ -747,7 +747,7 @@ THE SOFTWARE.
                     var x2d = ( star.x * scale ) + center.x; 
                     var y2d = ( star.y * scale ) + center.y; 
 
-                    if ( x2d > 0 && x2d < canvasWidth && y2d > 0 && y2d < canvasHeight ) {
+                    if ( x2d > -1 && x2d < canvasWidth && y2d > -1 && y2d < canvasHeight ) {
 
                         drawLine( star.x2d | 0, star.y2d | 0, x2d | 0, y2d | 0, star.color.r, star.color.g, star.color.b, 255 );
 
