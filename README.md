@@ -70,7 +70,7 @@ $( '#holder' ).warpDrive( settings );
 var warpdrive = new WarpDrive( document.getElementById( 'holder' ) );
 ```
 
-### jQuery with parameters:
+### JS with parameters:
 
 ```js
 var settings = {
