@@ -5,9 +5,25 @@
 
 Warp drive is a lightweight jQuery plugin that helps you create a cool, interactive, configurable, HTML5 canvas based warp drive/starfield effect. 
 
-## Demo & Examples
+## Demos & Examples
 
-Coming soon.
+### Overview
+
+* <http://blog.niklasknaack.de/?header=WarpDrive>
+
+### CodePen (old Version)
+
+* <https://codepen.io/NiklasKnaack/pen/OmwgKb>
+
+### More Examples
+
+* <http://nkunited.de/jquery/plugins/warpdrive/example1.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example2.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example3.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example4.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example5.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example6.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example7.html>
 
 ## Installation
 
