@@ -195,6 +195,8 @@ THE SOFTWARE.
         var mouseDown;
         var mousePos;
 
+        var paused = false;
+
         //---
 
         function init() {
@@ -565,7 +567,11 @@ THE SOFTWARE.
 
             requestAnimFrame( animloop );
 
-            render();
+            if ( !paused ) {
+
+                render();
+
+            }
 
         };
 
@@ -928,6 +934,20 @@ THE SOFTWARE.
             var rect = canvas.getBoundingClientRect();
 
             return { x: event.touches[ 0 ].clientX - rect.left, y: event.touches[ 0 ].clientY - rect.top };
+
+        };
+
+        //---
+
+        this.pause = function() {
+
+            paused = true;
+
+        };
+
+        this.unpause = function() {
+
+            paused = false;
 
         };
 
