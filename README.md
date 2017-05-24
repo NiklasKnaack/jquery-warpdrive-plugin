@@ -13,7 +13,7 @@ Warp drive is a lightweight jQuery plugin that helps you create a cool, interact
 
 ### Overview & Examples
 
-* <http://blog.niklasknaack.de/?header=WarpDrive>
+* <http://blog.niklasknaack.de/2017/05/warp-drive-jquery-plugin.html>
 
 ### CodePen Demo (old version)
 
@@ -28,6 +28,10 @@ Warp drive is a lightweight jQuery plugin that helps you create a cool, interact
 * <http://nkunited.de/jquery/plugins/warpdrive/example5.html>
 * <http://nkunited.de/jquery/plugins/warpdrive/example6.html>
 * <http://nkunited.de/jquery/plugins/warpdrive/example7.html>
+
+### Showcase
+
+* <http://blog.niklasknaack.de/?header=WarpDrive>
 
 ## Installation
 
