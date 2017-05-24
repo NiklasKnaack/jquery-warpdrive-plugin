@@ -28,6 +28,7 @@ Warp drive is a lightweight jQuery plugin that helps you create a cool, interact
 * <http://nkunited.de/jquery/plugins/warpdrive/example5.html>
 * <http://nkunited.de/jquery/plugins/warpdrive/example6.html>
 * <http://nkunited.de/jquery/plugins/warpdrive/example7.html>
+* <http://nkunited.de/jquery/plugins/warpdrive/example8.html>
 
 ### Showcase
 
@@ -159,6 +160,25 @@ starBgColor: '#fff'
 ```js
 starBgColor: 'rgb(255,255,255)'
 ```
+
+### Pause/unpause
+
+### jQuery
+
+```js
+$( '#holder' ).warpDrive( 'unpause' );
+$( '#holder' ).warpDrive( 'unpause' );
+```
+
+### JS
+
+```js
+warpdrive.pause();
+warpdrive.unpause();
+```
+
+Pause/unpause example:
+* <http://nkunited.de/jquery/plugins/warpdrive/example8.html>
 
 ## License
 
