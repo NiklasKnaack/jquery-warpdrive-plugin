@@ -166,7 +166,7 @@ starBgColor: 'rgb(255,255,255)'
 ### jQuery
 
 ```js
-$( '#holder' ).warpDrive( 'unpause' );
+$( '#holder' ).warpDrive( 'pause' );
 $( '#holder' ).warpDrive( 'unpause' );
 ```
 
