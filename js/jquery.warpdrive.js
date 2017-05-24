@@ -467,6 +467,26 @@ THE SOFTWARE.
         
         //---
 
+        function getStarPosition( radius, sideLength ) {
+
+            var x = Math.random() * sideLength - ( sideLength / 2 );
+            var y = Math.random() * sideLength - ( sideLength / 2 );
+
+            if ( radius > 0 ) {
+
+                while ( Math.sqrt( x * x + y * y ) < radius ) {
+
+                    x = Math.random() * sideLength - ( sideLength / 2 );
+                    y = Math.random() * sideLength - ( sideLength / 2 );
+
+                }
+
+            }
+
+            return { x:x, y:y };
+
+        };
+
         function addStar( x, y, z, ox, oy, oz ) {
 
             var star = {};
@@ -488,12 +508,14 @@ THE SOFTWARE.
 
             var x, y, z;
 
-            var star;
+            var star, starPosition;
 
             for ( i = 0; i < starBgCount; i++ ) {
 
-                x = Math.random() * 20000 - 10000;
-                y = Math.random() * 20000 - 10000;
+                starPosition = getStarPosition( 0, 20000 );
+
+                x = starPosition.x;
+                y = starPosition.y;
                 z = Math.round( Math.random() * starDistance );
 
                 star = addStar( x, y, z, x, y, z );
@@ -507,12 +529,10 @@ THE SOFTWARE.
 
             for ( i = 0; i < starCount; i++ ) {
 
-                var radiusX = Math.random() * 5000 + starWarpTunnelDiameter;
-                var radiusY = Math.random() * 5000 + starWarpTunnelDiameter;
-                var angle = Math.random() * MATHPI2;
+                starPosition = getStarPosition( starWarpTunnelDiameter, 10000 );
 
-                x = Math.cos( angle ) * radiusX;
-                y = Math.sin( angle ) * radiusY;
+                x = starPosition.x;
+                y = starPosition.y;
                 z = Math.round( Math.random() * starDistance );
 
                 star = addStar( x, y, z, x, y, z );
