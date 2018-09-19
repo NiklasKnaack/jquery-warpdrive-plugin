@@ -1,6 +1,6 @@
 /*
 Warp Drive jQuery plugin
-Version: 1.0.0
+Version: 1.0.1
 
 Written by Niklas Knaack
 
@@ -196,6 +196,8 @@ THE SOFTWARE.
         var mousePos;
 
         var paused = false;
+
+        var animFrameId;
 
         //---
 
@@ -557,15 +559,24 @@ THE SOFTWARE.
             return  window.requestAnimationFrame       ||
                     window.webkitRequestAnimationFrame ||
                     window.mozRequestAnimationFrame    ||
+                    window.msRequestAnimationFrame     ||
                     function( callback ) {
                         window.setTimeout( callback, 1000 / 60 );
                     };
 
         } )();
 
+        window.cancelAnimFrame = ( function() {
+
+		    return  window.cancelAnimationFrame       ||
+				    window.webkitCancelAnimationFrame ||
+		            window.mozCancelAnimationFrame;
+
+		} )();
+
         function animloop() {
 
-            requestAnimFrame( animloop );
+            animFrameId = requestAnimFrame( animloop );
 
             if ( !paused ) {
 
@@ -950,6 +961,54 @@ THE SOFTWARE.
             paused = false;
 
         };
+
+        //---
+
+        function destroy() {
+
+        	window.cancelAnimFrame( animFrameId );
+
+        	if ( settings.autoResize ) {
+
+            	window.removeEventListener( 'resize', resizeHandler );
+
+            }
+
+            if ( settings.addMouseControls ) {
+
+                canvas.removeEventListener( 'mousemove', mouseMoveHandler );
+                canvas.removeEventListener( 'mousedown', mouseDownHandler );
+                canvas.removeEventListener( 'mouseup', mouseUpHandler );
+                canvas.removeEventListener( 'mouseenter', mouseEnterHandler ); 
+                canvas.removeEventListener( 'mouseleave', mouseLeaveHandler ); 
+
+            }
+
+            if ( settings.addTouchControls ) {
+
+                canvas.removeEventListener( 'touchstart', touchStartHandler );
+                canvas.removeEventListener( 'touchend', touchEndHandler );
+                canvas.removeEventListener( 'touchmove', touchMoveHandler );
+                canvas.removeEventListener( 'touchcancel', touchCancelHandler );
+
+            }
+
+            clearImageData();
+
+            if ( element.hasChildNodes() ) {
+
+            	element.removeChild( canvas );
+
+            }
+
+            starColorLookupTable = [];
+            starBgColorLookupTable = [];
+            starHolder = [];
+            starBgHolder = [];
+
+        };
+
+        this.destroy = destroy;
 
         //---
 

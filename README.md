@@ -180,6 +180,20 @@ warpdrive.unpause();
 Pause/unpause example:
 * <http://nkunited.de/jquery/plugins/warpdrive/example8.html>
 
+### Destroy
+
+### jQuery
+
+```js
+$( '#holder' ).warpDrive( 'destroy' );
+```
+
+### JS
+
+```js
+warpdrive.destroy();
+```
+
 ## License
 
 This plugin is available under [the MIT license](http://mths.be/mit).
