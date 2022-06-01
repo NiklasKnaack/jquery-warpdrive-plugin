@@ -237,8 +237,12 @@ THE SOFTWARE.
 
             }
 
-            element.appendChild( canvas );
-
+            const scrollHeight =  document.body.scrollHeight
+            const multiple =  Math.ceil(scrollHeight/canvasHeight)
+            for (let index = 0; index <multiple; index++) {
+                element.appendChild( canvas );
+            }
+            
             //---
 
             ctx = canvas.getContext( '2d' );
